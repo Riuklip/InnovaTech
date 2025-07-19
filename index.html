@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InnovaTech</title>
+    <link href="dist/hamburgers.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,22 +20,22 @@
 
     <!-- Header -->
     <header>
-      <div class="container header-container">
-        <div class="logo"><img class="LogoIMG" src="Images/Logo_header-remove.png" alt=""></div>
-        <nav>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+        <div class="logo"><img class="LogoIMG" src="Images/Logo_header-remove2.png" alt=""></div>
+        <nav >
+          <ul class="hidden_menu ">
+            <li ><a class="nav_elem" href="#inicio">Inicio</a></li>
+            <li ><a class="nav_elem" href="#sobre-mi">Sobre Mí</a></li>
+            <li ><a class="nav_elem" href="#servicios">Servicios</a></li>
+            <li ><a class="nav_elem" href="#portafolio">Portafolio</a></li>
+            <li ><a class="nav_elem" href="#contacto">Contacto</a></li>
           </ul>
-          <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
+          <button class="menu_button hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
         </nav>
-      </div>
-    </header>
+      </header>
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
@@ -313,7 +314,7 @@
               ><i class="fab fa-linkedin-in"></i
             ></a>
             <a href="https://github.com/Riuklip" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.instagram.com/innovtech_caib/"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
 
@@ -330,7 +331,7 @@
 
         <div class="footer-col">
           <h4>Servicios</h4>
-          <ul class="footer-links">
+          <ul class="footer-links No_hover">
             <li><a href="#">Reparaciones Técnicas</a></li>
             <li><a href="#">Diseño Electrónico</a></li>
             <li><a href="#">Desarrollo Web</a></li>
@@ -357,6 +358,6 @@
     </footer>
     <!-- Agrega este script en el <head> -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>

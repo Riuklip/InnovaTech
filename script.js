@@ -1,3 +1,10 @@
+import hamburgerMenu from "./hamburger.js";
+const d=document;    
+d.addEventListener("click",(e)=>{
+    hamburgerMenu(e,".hidden_menu",".menu_button");
+    })
+
+
 (function () {
     // Inicializa EmailJS con tu User ID
     emailjs.init("KQwj_Sm-penUoskR0");
