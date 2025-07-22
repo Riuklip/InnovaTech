@@ -1,5 +1,6 @@
 export default function hamburgerMenu(e,menu,boton){
     const d=document;    
+    if (e.target.closest('form')) return;
     const $navel=d.querySelectorAll(".nav_elem")
     var pulsado=e.target.classList;
     if(e.target.matches(boton) || e.target.matches(".menu_button *")){

@@ -1,71 +1,67 @@
 import hamburgerMenu from "./hamburger.js";
-const d=document;    
-d.addEventListener("click",(e)=>{
-    hamburgerMenu(e,".hidden_menu",".menu_button");
-    })
 
+const d = document;
 
-(function () {
-    // Inicializa EmailJS con tu User ID
-    emailjs.init("KQwj_Sm-penUoskR0");
-  })();
+// Inicialización directa de EmailJS
+emailjs.init("SjO1Xf_HPHQgbHemB");
 
-  // Mobile Menu Toggle
-  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-  const navMenu = document.querySelector("nav ul");
+d.addEventListener("click", (e) => {
+  // Excluye clicks en formularios
+  if (!e.target.closest('form')) {
+    hamburgerMenu(e, ".hidden_menu", ".menu_button");
+  }
+});
 
-  mobileMenuBtn.addEventListener("click", () => {
-    navMenu.style.display =
-      navMenu.style.display === "flex" ? "none" : "flex";
+// Smooth Scrolling (código existente)
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 80,
+        behavior: "smooth",
+      });
+    }
   });
+});
 
-  // Smooth Scrolling
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
+// Contact Form
+const contactForm = document.querySelector(".contact-form form");
 
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 80,
-          behavior: "smooth",
-        });
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        // Close mobile menu if open
-        if (window.innerWidth < 768) {
-          navMenu.style.display = "none";
-        }
-      }
-    });
-  });
+    // Validación
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-  // Form Submission
-  // Reemplaza el código del formulario por este:
-  const contactForm = document.querySelector(".contact-form form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      let mensaje = document.getElementById("message").value;
-      let numero = document.getElementById("phone").value;
-      let finalmsj = `${mensaje}
-    Contacteme al: ${numero} `;
-      // Obtén los datos del formulario
-      const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        service: document.getElementById("service").value,
-        message: finalmsj,
-      };
+    if (!name || !email || !service || !phone || !message) {
+      alert("Por favor complete todos los campos obligatorios");
+      return;
+    }
 
-      // Envía el correo
-      emailjs.send("service_m6o29ew", "template_6zky109", formData).then(
-        function (response) {
+    // Envío con EmailJS
+    emailjs.send("service_2cgi42s","template_8aho7et");
+    emailjs
+      .send("service_2cgi42s", "template_8aho7et", {
+        name: name,
+        email: email,
+        message: `Para el servicio:${service}\n\n${message}\n\nTeléfono: ${phone}`, // Formato mejorado
+      })
+      .then(
+        () => {
           alert("¡Mensaje enviado! Te contactaré pronto.");
           contactForm.reset();
         },
-        function (error) {
-          alert("Error al enviar: " + JSON.stringify(error));
+        (error) => {
+          console.error("Error de EmailJS:", error);
+          alert("Error al enviar. Por favor intente nuevamente.");
         }
       );
-    });
-  }
+  });
+}
