@@ -65,3 +65,44 @@ if (contactForm) {
       );
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  // Datos JSON de ejemplo con teléfono y email
+  const teamData = [
+      {
+          imgSrc: "https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          name: "Eli Carlos",
+          info: "Soy un Ingeniero graduado en Telecomunicaciones y Electrónica en la UCLV, universidad en la que esta carrera se considera de excelecia, mi pasión es trabajar solucionando los problemas y diseñando soluciones acordes.Especializado en diseño de circuitos electrónicos, reparación de hardware, desarrollo de software y soluciones web personalizadas.",
+          phone: "+5356096338",
+          email: "eliclpere@gmail.com"
+      }
+  ];
+
+  const section = document.querySelector('.about');
+  const template = section.querySelector('.about_template');
+  
+  // Limpiar sección antes de agregar nuevos elementos
+  // section.innerHTML = '';
+  
+  teamData.forEach(member => {
+      // Clonar el contenido del template
+      const clone = template.content.cloneNode(true);
+      
+      // Llenar los datos básicos
+      const container = clone.querySelector('.container_devs');
+      container.querySelector('img').src = member.imgSrc;
+      container.querySelector('img').alt = `Foto de ${member.name}`;
+      container.querySelector('.about_name').textContent = member.name;
+      container.querySelector('.about_info').textContent = member.info;
+      
+      // Llenar los enlaces de contacto
+      const phoneLink = container.querySelector('.about_phone');
+      const emailLink = container.querySelector('.about_mail');
+      
+      phoneLink.href = `https://wa.me/${member.phone}`;
+      
+      emailLink.href = `mailto:${member.email}`;
+    
+      // Agregar al DOM
+      section.appendChild(clone);
+  });
+});

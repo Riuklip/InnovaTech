@@ -15,6 +15,10 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+a{
+    text-decoration: none;
+}
+
 
 body {
     background-color: #fff;
@@ -189,52 +193,81 @@ nav ul li a:hover::after {
 }
 
 /* About Section */
-.about {
-    padding: 100px 0;
-    background: white;
-}
-
-.about-container {
+.about{
+    margin: 70px;
     display: flex;
-    align-items: center;
-    gap: 50px;
+    flex-direction: column;
 }
-
-.about-img {
-    flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.about-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
+.about>h2{
     color: var(--secondary);
+    font-size: 35px;
+}
+.container_devs{
+    margin: 40px 0px;
+    display: flex;
+    width: 90%;
+    border-radius: 30px;
+    background-color: var(--gray);
+    height: 350px;
+}
+.container_devs>img{
+    width: 40%;
+    border-radius: 30px 0px 0px 30px;
+}
+.cont_info{
+    padding: 20px;
+    width: 60%;
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+}
+.about_links{
+    margin:40px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.about_links i{
+    margin: auto;
+    
+    font-size: 35px;
+    /* margin: 20px 40px; */
+}
+.about_phone{
+ 
+    display: flex;
+}
+.about_phone i{
+   color: var(--light);
+   background-color: #25D366;
+   border-radius: 50%;
+   height: 60px;
+   width: 60px;
+   text-align: center;
+   padding: 10px;
+   transition: .3s;
 }
 
-.about-text p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+.about_mail i{
+    background-color: var(--light);
+    color: var(--primary);
+    display: flex;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    padding: 11px;
+    transition: .3s;
+}
+.about_phone i:hover{
+    background-color:var(--light) ;
+    color: #25D366;
+}
+.about_mail i:hover{
+    background-color: var(--primary);
+    color: var(--light);
 }
 
-.highlight {
-    background: var(--light);
-    padding: 30px;
-    border-radius: 10px;
-    border-left: 4px solid var(--accent);
-    margin-top: 30px;
-}
 
 /* Services Section */
 .services {
