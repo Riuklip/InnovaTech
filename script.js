@@ -71,9 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
       {
           imgSrc: "https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           name: "Eli Carlos",
-          info: "Soy un Ingeniero graduado en Telecomunicaciones y Electrónica en la UCLV, universidad en la que esta carrera se considera de excelecia, mi pasión es trabajar solucionando los problemas y diseñando soluciones acordes.Especializado en diseño de circuitos electrónicos, reparación de hardware, desarrollo de software y soluciones web personalizadas.",
+          info: "Soy un Ingeniero graduado en Telecomunicaciones y Electrónica en la UCLV. Mi pasión es trabajar diseñando soluciones acordes a los problemas. Especializado en diseño de circuitos electrónicos, reparación de hardware, desarrollo de software y soluciones web personalizadas.",
           phone: "+5356096338",
-          email: "eliclpere@gmail.com"
+          email: "eliclpere@gmail.com",
+          ciudad: "Caibarien, Villa Clara"
       }
   ];
 
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       container.querySelector('img').alt = `Foto de ${member.name}`;
       container.querySelector('.about_name').textContent = member.name;
       container.querySelector('.about_info').textContent = member.info;
-      
+      container.querySelector(".about_ciudad").textContent=member.ciudad;
       // Llenar los enlaces de contacto
       const phoneLink = container.querySelector('.about_phone');
       const emailLink = container.querySelector('.about_mail');
