@@ -1,7 +1,7 @@
 :root {
-    --primary: #0066cc;
-    --secondary: #003366;
-    --accent: #ff9900;
+    --primary: #093F59;
+    --secondary: #131f39;
+    --accent: #03AAE7;
     --light: #f5f9ff;
     --dark: #1a1a1a;
     --gray: #e6e6e6;
@@ -105,14 +105,17 @@ nav ul li a:hover::after {
 }
 .hamburger {
     display: none;
+    
   }
 
-
+.hamburger-box *{
+background-color: white;
+}
 
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(#0066cc59, #00336654), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background: linear-gradient(#0066ccdc, #003366e0), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -143,19 +146,19 @@ nav ul li a:hover::after {
 .btn {
     display: inline-block;
     padding: 14px 35px;
-    background: var(--accent);
+    background: var(--secondary);
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s;
-    border: 2px solid var(--accent);
+    border: 2px solid var(--secondary);
 }
 
 .btn:hover {
     background: transparent;
-    color: var(--accent);
+    color: var(--secondary);
 }
 
 .btn-secondary {
@@ -583,6 +586,8 @@ footer {
 @media (max-width: 992px) {
 
     .hamburger {
+        color: white;
+        background-color: white;
         display: block;
         border: none;
         background-color: inherit;

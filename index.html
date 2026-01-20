@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="Images/Logo_solo-removebg.ico" type="image/x-icon">
   </head>
   <body>
-    <!-- WhatsApp Float Button -->
+    <!-- WhatsApp boton flotante -->
     <a href="https://wa.me/+5356096338" class="whatsapp-float" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
@@ -24,9 +24,9 @@
         <nav >
           <ul class="hidden_menu ">
             <li ><a class="nav_elem" href="#inicio">Inicio</a></li>
-            <li ><a class="nav_elem" href="#sobre-mi">Sobre Mí</a></li>
+            <!-- <li ><a class="nav_elem" href="#sobre-mi">Sobre Mí</a></li> -->
             <li ><a class="nav_elem" href="#servicios">Servicios</a></li>
-            <li ><a class="nav_elem" href="#portafolio">Portafolio</a></li>
+            <!-- <li ><a class="nav_elem" href="#portafolio">Portafolio</a></li> -->
             <li ><a class="nav_elem" href="#contacto">Contacto</a></li>
           </ul>
           <button class="menu_button hamburger hamburger--collapse" type="button">
@@ -37,7 +37,6 @@
         </nav>
       </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="inicio">
       <div class="hero-content">
         <h1>Soluciones Electrónicas y Digitales a Medida</h1>
@@ -53,42 +52,21 @@
     </section>
 
     <!-- Tech Logos -->
- 
 
     <div class="tech-logos">
         <div class="logos-container">
-          <!-- Arduino con color oficial -->
+          
           <div class="tech-logo"><img src="Images/arduino-1.svg" width="50" alt="Logo ard"></div>
           
           <div class="tech-logo"><i style="color:  #000;" class="fas fa-microchip"></i></div>
           
-          <!-- Segundo Arduino con animación -->
+          
           <div class="tech-logo"><i style="color:  #264de4;" class="fab fa-css3-alt"></i></div>
           <div class="tech-logo"><i style="color: #e34c26;" class="fab fa-html5"></i></div>
           <div class="tech-logo"><i class="fab fa-js" style="color: #f0db4f"></i></div>
         </div>
       </div>
 
-    <!-- About Section -->
-    <section class="about" id="sobre-mi">
-    <h2>Sobre Nosotros</h2>
-    <template class="about_template">
-      <div class="container_devs">
-      <!-- <div class="about_img"> -->
-        <img src="" alt="">
-      <!-- </div> -->
-        <div class="cont_info">
-          <h2 class="about_name"></h2>
-          <p class="about_info"></p>
-          <h4 class="about_ciudad"></h4>
-          <div class="about_links">
-          <a href="" class="about_phone"><i class="fab fa-whatsapp"></i></a>
-          <a href="" class="about_mail"> <i class="fas fa-envelope"></i></a>
-      </div>
-      </div>
-      </div>
-  </template>
-    </section>
 
     <!-- Services Section -->
     <section class="services" id="servicios">
@@ -96,12 +74,12 @@
         <div class="section-title">
           <h2>Servicios Profesionales</h2>
           <p>
-            Ofrezco soluciones integrales para necesidades técnicas y digitales
+            Damos una presencia digital en redes, para aumentar las ventas.
           </p>
         </div>
 
         <div class="services-grid">
-          <div class="service-card">
+          <!-- <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-tools"></i>
             </div>
@@ -114,42 +92,53 @@
                 <li>Mantenimiento preventivo</li>
               </ul>
             </div>
-          </div>
+          </div> -->
 
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-project-diagram"></i>
             </div>
             <div class="service-content">
-              <h3>Diseño Electrónico</h3>
+              <h3>Marketing Digital</h3>
               <ul>
-                <li>Diseño de circuitos personalizados</li>
-                <li>Diseño de PCB</li>
-                <li>Soluciones para automatización</li>
+                <li>Desarrollo de logo</li>
+                <li>Presentación de poster para venta de productos</li>
+                <li>Estrategias para redes Sociales</li>
               </ul>
             </div>
           </div>
-
+          
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-laptop-code"></i>
             </div>
             <div class="service-content">
-              <h3>Desarrollo Web & Software</h3>
+              <h3>Desarrollo Web</h3>
               <ul>
                 <li>Diseño y desarrollo web profesional</li>
-                <li>Aplicaciones de control y monitoreo</li>
-                <li>Instalación de software especializado</li>
                 <li>Soluciones e-commerce</li>
                 <li>Integración de sistemas</li>
               </ul>
             </div>
           </div>
         </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <div class="service-content">
+            <h3>Soporte Técnico</h3>
+            <ul>
+              <li>Instalación de Windows</li>
+              <li>Reparaciones Generales</li>
+              <li>Instalación de redes</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section
     <section class="portfolio" id="portafolio">
       <div class="container">
         <div class="section-title">
@@ -210,9 +199,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Contact Section -->
+    <!--  Section Contact-->
     <section class="contact" id="contacto">
       <div class="container contact-container">
         <div class="contact-info">
@@ -280,9 +269,9 @@
               <label for="service">Servicio de Interés</label>
               <select id="service" required>
                 <option value="">Seleccionar servicio</option>
-                <option value="reparacion">Reparaciones Técnicas</option>
-                <option value="diseno">Diseño Electrónico</option>
-                <option value="desarrollo">Desarrollo Web & Software</option>
+                <option value="diseno">Marketing Digital</option>
+                <option value="desarrollo">Desarrollo Web</option>
+                <option value="reparacion">Soporte Técnico</option>
                 <option value="otro">Otro servicio</option>
               </select>
             </div>
@@ -313,6 +302,8 @@
             ></a>
             <a href="https://github.com/Riuklip" target="_blank"><i class="fab fa-github"></i></a>
             <a target="_blank" href="https://www.instagram.com/innovtech_caib/"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.instagram.com/innovtech_caib/"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61586661478313"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
 
@@ -320,9 +311,9 @@
           <h4>Enlaces Rápidos</h4>
           <ul class="footer-links">
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
+         
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
+      
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
@@ -330,11 +321,10 @@
         <div class="footer-col">
           <h4>Servicios</h4>
           <ul class="footer-links No_hover">
-            <li><a href="#">Reparaciones Técnicas</a></li>
-            <li><a href="#">Diseño Electrónico</a></li>
+      
+            <li><a href="#">Marketing Digital</a></li>
             <li><a href="#">Desarrollo Web</a></li>
-            <li><a href="#">Soluciones IoT</a></li>
-            <li><a href="#">Consultoría Técnica</a></li>
+            <li><a href="#">Soporte Técnico</a></li>
           </ul>
         </div>
 

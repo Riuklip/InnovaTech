@@ -84,26 +84,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Limpiar sección antes de agregar nuevos elementos
   // section.innerHTML = '';
   
-  teamData.forEach(member => {
-      // Clonar el contenido del template
-      const clone = template.content.cloneNode(true);
+  // teamData.forEach(member => {
+  //     // Clonar el contenido del template
+  //     const clone = template.content.cloneNode(true);
       
-      // Llenar los datos básicos
-      const container = clone.querySelector('.container_devs');
-      container.querySelector('img').src = member.imgSrc;
-      container.querySelector('img').alt = `Foto de ${member.name}`;
-      container.querySelector('.about_name').textContent = member.name;
-      container.querySelector('.about_info').textContent = member.info;
-      container.querySelector(".about_ciudad").textContent=member.ciudad;
-      // Llenar los enlaces de contacto
-      const phoneLink = container.querySelector('.about_phone');
-      const emailLink = container.querySelector('.about_mail');
+  //     // Llenar los datos básicos
+  //     const container = clone.querySelector('.container_devs');
+  //     container.querySelector('img').src = member.imgSrc;
+  //     container.querySelector('img').alt = `Foto de ${member.name}`;
+  //     container.querySelector('.about_name').textContent = member.name;
+  //     container.querySelector('.about_info').textContent = member.info;
+  //     container.querySelector(".about_ciudad").textContent=member.ciudad;
+  //     // Llenar los enlaces de contacto
+  //     const phoneLink = container.querySelector('.about_phone');
+  //     const emailLink = container.querySelector('.about_mail');
       
-      phoneLink.href = `https://wa.me/${member.phone}`;
+  //     phoneLink.href = `https://wa.me/${member.phone}`;
       
-      emailLink.href = `mailto:${member.email}`;
+  //     emailLink.href = `mailto:${member.email}`;
     
-      // Agregar al DOM
-      section.appendChild(clone);
-  });
+  //     // Agregar al DOM
+  //     section.appendChild(clone);
+  // });
 });
